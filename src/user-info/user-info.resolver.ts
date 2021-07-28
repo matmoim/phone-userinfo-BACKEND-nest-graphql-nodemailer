@@ -5,10 +5,10 @@ import { UserInfoService } from './user-info.service'
 
 @Resolver(of => UserInfo)
   export class UserInfoResolver{
-    constructor(private UserInfoService: UserInfoService) {}
+    constructor(private userinfoService: UserInfoService) {}
 
 @Query(returns => UserInfo)
 UserInfo(): Promise<UserInfo[]>{
-  return this.UserInfoService.findAll()
+  return this.userinfoService.findAll()
 }
   }

@@ -2,12 +2,24 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
-type Pet {
-  id: Int!
-  name: String!
-  type: String
+type PhoneNumber {
+  phone: Float!
 }
 
+type UserInfo {
+  name: String!
+  phone: Float!
+  email: String
+  address: String
+  date: DateTime
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
 type Query {
-  pets: [Pet!]!
+  phonenumber: PhoneNumber!
+  UserInfo: UserInfo!
 }
