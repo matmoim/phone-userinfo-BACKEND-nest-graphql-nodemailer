@@ -7,7 +7,7 @@ import { UserInfoService } from './user-info.service'
   export class UserInfoResolver{
     constructor(private userinfoService: UserInfoService) {}
 
-@Query(returns => UserInfo)
+@Query(returns => [UserInfo])
 UserInfo(): Promise<UserInfo[]>{
   return this.userinfoService.findAll()
 }

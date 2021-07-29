@@ -13,9 +13,8 @@ import { UserInfoModule } from './user-info/user-info.module';
     GraphQLModule.forRoot({
     autoSchemaFile: join(process.cwd(), 'src/schema.gql')
   }),
-  PhoneNumberModule,
-  UserInfoModule,],
-  controllers: [AppController, PhoneController, UserController],
+  PhoneNumberModule, UserInfoModule],
+  controllers: [AppController,PhoneController,UserController  ],
   providers: [AppService],
 })
 export class AppModule {}

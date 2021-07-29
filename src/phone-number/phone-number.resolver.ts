@@ -5,9 +5,10 @@ import { PhoneNumberService } from './phone-number.service';
 
 @Resolver(of => PhoneNumber)
   export class PhoneNumberResolver{
-    constructor(private phoneNumberService: PhoneNumberService) {}
+    constructor(private phoneNumberService: PhoneNumberService) {
+    }
 
-@Query(returns => PhoneNumber)
+@Query(returns => [PhoneNumber])
 phonenumber(): Promise<PhoneNumber[]>{
   return this.phoneNumberService.findAll()
 }

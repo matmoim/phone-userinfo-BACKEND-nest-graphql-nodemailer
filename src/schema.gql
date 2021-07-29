@@ -3,23 +3,18 @@
 # ------------------------------------------------------
 
 type PhoneNumber {
-  phone: Float!
+  number: Float
 }
 
 type UserInfo {
-  name: String!
-  phone: Float!
+  phone: Float
+  name: String
   email: String
   address: String
-  date: DateTime
+  date: String
 }
 
-"""
-A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
-"""
-scalar DateTime
-
 type Query {
-  phonenumber: PhoneNumber!
-  UserInfo: UserInfo!
+  phonenumber: [PhoneNumber!]!
+  UserInfo: [UserInfo!]!
 }

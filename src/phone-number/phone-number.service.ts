@@ -6,8 +6,7 @@ import { PhoneNumber } from './phone-number.entity';
 export class PhoneNumberService {
   async findAll(): Promise<PhoneNumber[]>{
     const phonenumber = new PhoneNumber();
-    phonenumber.phone = 1;
-
+    phonenumber.number ;
     return [phonenumber];
     
   }

@@ -6,10 +6,12 @@ import { UserInfo } from './user-info.entity';
 export class UserInfoService {
   async findAll(): Promise<UserInfo[]>{
     const userinfo = new UserInfo();
-    userinfo.phone = 1;
-    userinfo.name = 'Donald';
-    userinfo.email = 'usa@usa';
-    userinfo.date = new Date('July 4,1994 04:44:44');
+    userinfo.phone = 14;
+    userinfo.name = 'Ivan';
+    userinfo.phone = 2929292929;
+    userinfo.email = 'email@gmail.com';
+    userinfo.address = 'NY' 
+
 
     return [userinfo];
     
