@@ -16,16 +16,35 @@ export class UserInfoResolver {
     return this.userinfoService.findAll()
   }
 
-  // @Query(returns => ['yes'])
-  // async test() {
-  //   try {
-  //     await this.mailerService.sendMail({
-  //       to: 'mathewnodejs@gmail.com',
-  //       raw: 'Hello',
+  @Query(() => String)
+  test1(): string {
+    return 'aaa'
+  }
+
+
+  @Query(() => String)
+  async test(): Promise<string> {
+    try {
+      await this.mailerService
+      .sendMail({
+        to: ` mathewnodejs@gmail.com`,
+        from: 'Info Sure-Lock-Key <system@surelockkey.com>',
+        subject: 'New client from SureLock-n-Key LLC',
+        text: 'Contact',
+        html: '<div>test</div>',
+      })
+      .catch((err) => {
+        throw err;
+      });
+      // await this.mailerService.sendMail({
+      //   to: 'mathewnodejs@gmail.com ',
+      //   raw: 'Hello',
         
-  //     })
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
+      // })
+
+      return 'Done'
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
