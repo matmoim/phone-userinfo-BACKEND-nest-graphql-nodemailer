@@ -1,7 +1,8 @@
-import { Field, InputType, ObjectType } from "@nestjs/graphql";
+import { Field, InputType,Entity } from "@nestjs/graphql";
+@Entity()
 @InputType()
 export class PhoneNumber{
-  @Field({nullable :true})
+  @Field(() => Number, {nullable :true})
     number:number;
     }
 

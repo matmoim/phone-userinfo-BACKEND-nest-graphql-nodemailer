@@ -29,15 +29,15 @@ export class UserInfoResolver {
     try {
       await this.mailerService
       .sendMail({
-        to: ` mathewnodejs@gmail.com`,
+        to: `mathewnodejs@gmail.com`,
         from: 'Info Sure-Lock-Key <system@surelockkey.com>',
         subject: 'New client from SureLock-n-Key LLC',
         text: 'Contact',
-        html: '<div>test</div>',
+        html: '<obj>UserInfo</obj>',
       })
-      .catch((err) => {
-        throw err;
-      });
+      // .catch((err) => {
+      //   throw err;
+      // });
       
       return 'Done'
 
