@@ -6,11 +6,11 @@ import { UserInfo } from './user-info.ot';
 export class UserInfoService {
   async findAll(): Promise<UserInfo[]>{
     const userinfo = new UserInfo();
-    userinfo.phone = 14;
-    userinfo.name = 'Ivan';
-    userinfo.phone = 2929292929;
-    userinfo.email = 'email@gmail.com';
-    userinfo.address = 'NY' 
+    userinfo.phone 
+    userinfo.name 
+    userinfo.phone 
+    userinfo.email 
+    userinfo.address 
 
 
     return [userinfo];

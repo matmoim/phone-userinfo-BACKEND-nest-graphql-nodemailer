@@ -1,7 +1,8 @@
 import { MailerService } from '@nestjs-modules/mailer';
-import { Resolver, Query } from '@nestjs/graphql';
+import { Resolver, Query, Mutation } from '@nestjs/graphql';
 import { UserInfo } from './user-info.ot';
 import { UserInfoService } from './user-info.service'
+
 
 
 @Resolver(of => UserInfo)
@@ -11,18 +12,19 @@ export class UserInfoResolver {
     private mailerService: MailerService
   ) { }
 
-  @Query(returns => [UserInfo])
-  userInfo(): Promise<UserInfo[]> {
-    return this.userinfoService.findAll()
-  }
+  // @Query(returns => [UserInfo])
+  // userInfo(): Promise<UserInfo[]> {
+  //   return this.userinfoService.findAll()
+  // }
 
-  @Query(() => String)
-  test1(): string {
-    return 'aaa'
-  }
+  // @Query(() => String)
+  // test1(): string {
+  //   return 'aaa'
+  // }
 
 
-  @Query(() => String)
+  // @Query(() => String)
+  @Mutation (returns => [UserInfo])
   async test(): Promise<string> {
     try {
       await this.mailerService
@@ -36,13 +38,9 @@ export class UserInfoResolver {
       .catch((err) => {
         throw err;
       });
-      // await this.mailerService.sendMail({
-      //   to: 'mathewnodejs@gmail.com ',
-      //   raw: 'Hello',
-        
-      // })
-
+      
       return 'Done'
+
     } catch (error) {
       console.log(error);
     }
