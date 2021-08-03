@@ -15,7 +15,8 @@ import config from './Config/keys';
     GraphQLModule.forRoot({
     autoSchemaFile: join(process.cwd(), 'src/schema.gql')
   }),
-  PhoneNumberModule, UserInfoModule],
+  PhoneNumberModule, 
+  UserInfoModule],
   controllers: [AppController],
   providers: [AppService],
 })

@@ -1,4 +1,4 @@
-export class UserInfoInject {
+export class UserInfoDto {
   phone:number;
   name:string;
   email:string;
