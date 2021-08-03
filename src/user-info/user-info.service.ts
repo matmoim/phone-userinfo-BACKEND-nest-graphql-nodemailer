@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { UserInfo } from './user-info.entity';
+import { UserInfo } from './user-info.ot';
 
 
 @Injectable()

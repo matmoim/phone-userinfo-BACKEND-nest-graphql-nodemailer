@@ -1,5 +1,5 @@
 import { Resolver,Query } from '@nestjs/graphql';
-import { PhoneNumber } from './phone-number.entity';
+import { PhoneNumber } from './phone-number.ot';
 import { PhoneNumberService } from './phone-number.service';
 
 

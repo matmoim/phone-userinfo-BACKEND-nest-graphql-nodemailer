@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { PhoneNumber } from './phone-number.entity';
+import { PhoneNumber } from './phone-number.ot';
 
 
 @Injectable()

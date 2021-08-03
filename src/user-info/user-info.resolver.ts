@@ -1,5 +1,5 @@
 import { Resolver,Query } from '@nestjs/graphql';
-import { UserInfo } from './user-info.entity';
+import { UserInfo } from './user-info.ot';
 import { UserInfoService } from './user-info.service'
 
 
