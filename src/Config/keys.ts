@@ -8,11 +8,11 @@ export default {
         port: 465,
         secure: true,
         auth: {
-          user: 'matvii.moiseienko@surelockkey.com',
-          pass: 'G5@ZaopT8UjS42qihX',
+          user: 'mathewnodejs@gmail.com',
+          pass: '',
         },
         defaults: {
-          from: `"Back-End" <matvii.moiseienko@surelockkey.com>`,
+          from: `"Back-End" <mathewnodejs@gmail.com>`,
         },
         template: {
           dir: process.cwd() + '/templates/',

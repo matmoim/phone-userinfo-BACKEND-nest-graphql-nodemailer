@@ -16,5 +16,5 @@ type UserInfo {
 
 type Query {
   phonenumber: [PhoneNumber!]!
-  UserInfo: [UserInfo!]!
+  userInfo: [UserInfo!]!
 }

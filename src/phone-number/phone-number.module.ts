@@ -4,6 +4,6 @@ import {PhoneNumberResolver} from './phone-number.resolver';
 
 
 @Module({
-  providers: [PhoneNumberService,PhoneNumberResolver]
+  providers: [PhoneNumberService,PhoneNumberResolver],
 })
 export class PhoneNumberModule {}
