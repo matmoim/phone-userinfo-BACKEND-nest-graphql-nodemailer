@@ -29,8 +29,8 @@ export class UserInfoResolver {
     try {
       await this.mailerService
         .sendMail({
-          to: `mathewnodejs@gmail.com`,
-          from: 'Info Sure-Lock-Key <system@surelockkey.com>',
+          to: `//write gmail to`,
+          from: 'Info Sure-Lock-Key <//write gmail from>',
           subject: 'New client from SureLock-n-Key LLC',
           text: 'Contact',
           html: `<obj>UserInfo ${phone}</obj>`,

@@ -9,11 +9,11 @@ export default {
         port: 465,
         secure: true,
         auth: {
-          user: 'system@surelockkey.com',
-          pass: 'G5@ZaopT8UjS42qihX',
+          user: '//write gmail from',
+          pass: '//write password of gmail from',
         },
         defaults: {
-          from: `"Back-End" <system@surelockkey.com>`,
+          from: `"Back-End" <>`,
         },
         template: {
           dir: process.cwd() + '/templates/',
