@@ -4,11 +4,11 @@ import { PhoneNumber } from './phone-number.ot';
 
 @Injectable()
 export class PhoneNumberService {
-  async findAll(): Promise<PhoneNumber[]>{
+  async findAll(): Promise<PhoneNumber[]> {
     const phonenumber = new PhoneNumber();
-    phonenumber.number ;
+    phonenumber.number;
     return [phonenumber];
-    
+
   }
 
 }

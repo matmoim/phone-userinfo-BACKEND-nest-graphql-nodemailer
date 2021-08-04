@@ -1,44 +1,42 @@
 import { MailerService } from '@nestjs-modules/mailer';
-import { Resolver, Query, Mutation } from '@nestjs/graphql';
-import { UserInfo } from './user-info.ot';
+import { Resolver, Query, Mutation, Args } from '@nestjs/graphql';
 import { UserInfoService } from './user-info.service'
 
 
 
-@Resolver(of => UserInfo)
+@Resolver()
 export class UserInfoResolver {
   constructor(
     private userinfoService: UserInfoService,
     private mailerService: MailerService
   ) { }
 
-  // @Query(returns => [UserInfo])
-  // userInfo(): Promise<UserInfo[]> {
-  //   return this.userinfoService.findAll()
-  // }
 
-  // @Query(() => String)
-  // test1(): string {
-  //   return 'aaa'
-  // }
+  @Query(() => String)
+  test1(): string {
+    return 'aaa'
+  }
 
 
-  // @Query(() => String)
-  @Mutation (returns => [UserInfo])
-  async test(): Promise<string> {
+  @Mutation(() => String)
+  async test(
+    @Args('phone', { type: () => Number }) phone: number,
+    @Args('name', { type: () => String }) date: string,
+    @Args('address', { type: () => String }) address: string,
+    @Args('email', { type: () => String }) email: string,
+    @Args('name', { type: () => String }) name: string,
+  ): Promise<string> {
     try {
       await this.mailerService
-      .sendMail({
-        to: `mathewnodejs@gmail.com`,
-        from: 'Info Sure-Lock-Key <system@surelockkey.com>',
-        subject: 'New client from SureLock-n-Key LLC',
-        text: 'Contact',
-        html: '<obj>UserInfo</obj>',
-      })
-      // .catch((err) => {
-      //   throw err;
-      // });
-      
+        .sendMail({
+          to: `mathewnodejs@gmail.com`,
+          from: 'Info Sure-Lock-Key <system@surelockkey.com>',
+          subject: 'New client from SureLock-n-Key LLC',
+          text: 'Contact',
+          html: `<obj>UserInfo ${phone}</obj>`,
+        })
+
+
       return 'Done'
 
     } catch (error) {

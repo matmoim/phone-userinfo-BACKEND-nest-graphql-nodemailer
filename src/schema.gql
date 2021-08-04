@@ -2,19 +2,11 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
-type PhoneNumber {
-  number: Float
-}
-
-type UserInfo {
-  phone: Float
-  name: String
-  email: String
-  address: String
-  date: String
-}
-
 type Query {
-  phonenumber: [PhoneNumber!]!
-  test: [UserInfo!]!
+  test1: String!
+}
+
+type Mutation {
+  phonenumber(phone: Int!): String!
+  test(name: String!, email: String!, address: String!, phone: Float!): String!
 }

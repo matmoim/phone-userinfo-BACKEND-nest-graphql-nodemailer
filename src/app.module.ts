@@ -13,11 +13,11 @@ import config from './Config/keys';
   imports: [
     MailerModule.forRootAsync(config.mail.properties),
     GraphQLModule.forRoot({
-    autoSchemaFile: join(process.cwd(), 'src/schema.gql')
-  }),
-  PhoneNumberModule, 
-  UserInfoModule],
+      autoSchemaFile: join(process.cwd(), 'src/schema.gql')
+    }),
+    PhoneNumberModule,
+    UserInfoModule],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }
